@@ -1,0 +1,35 @@
+.titulo {
+    font-weight: 900;
+    text-shadow: 0px 0px 20px black;
+    font-size: 80px;
+}
+
+.foto {
+    filter: brightness(90%);
+}
+
+.carousel-caption {
+    top: 160px;
+}
+
+.texto-jus {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.texto-h1 {
+    font-weight: 900;
+}
+
+.hide {
+    z-index: 1;
+}
+
+.container-renta {
+    height: 450px;
+}
+
+.titulo-card{
+    font-weight: 700;
+    font-size: 21px;
+}

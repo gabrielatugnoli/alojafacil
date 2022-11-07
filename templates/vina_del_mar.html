@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fuente.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/favicon.png')}}">
+
+    <title>Departamentos y casas en Viña del Mar - Aloja Fácil</title>
+    <meta name="description" content="Departamentos y casas en Viña del Mar para arriendo en la V Región - Aloja Fácil">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-lg-top" style="height: 100px;">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='img/logo.jpeg')}}" alt="" width="70" height="70">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-3 mb-2 mb-lg-0 fs-5">
+                    <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/"> Inicio </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ubicaciones
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark bg-primary">
+                            <li><a class="dropdown-item" href="/vina">Viña del Mar</a></li>
+                            <li><a class="dropdown-item " href="/concon">Concón</a></li>
+                            <li><a class="dropdown-item" href="/renaca">Reñaca</a></li>
+                            <li><a class="dropdown-item" href="/papudo">Papudo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/rentabiliza">¿Eres propietario?</a>
+                    </li>
+                </ul>
+    
+                <ul class="navbar-nav ms-auto me-1 mb-2 mb-lg-0 fs-5 ps-3"> 
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/contacto"> Contáctanos </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" aria-current="page" href="https://www.airbnb.cl/users/show/116558655"> AirBnB </a>
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+    </nav>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{{ url_for('static', filename='loc/vina_long.jpg')}}" alt="First slide">
+      </div>
+    </div>
+  </div>
+
+
+<h1 class="text-center texto-h1 mt-4 mb-5">Departamentos en Viña del Mar</h1>
+
+<!-- DEPTO 1 Viña del Mar, Casino,Wi Fi y Estacionamiento -->
+
+<div class="row mt-2 pt-3 pb-3">
+    <div class="col-6">
+        <div class="ms-5 ms-2">
+            <h2> Viña del Mar, Casino,Wi Fi y Estacionamiento </h2>
+            <p class="texto-jus"> Celebra el Año Nuevo junto al mar, por la ubicación del departamento podrás caminar tranquilo y olvidarte de usar el vehículo.
+
+                Lindo y cómodo departamento en el mejor sector de Viña del Mar, cercano al casino y centros comerciales. Totalmente equipado: cocina, horno, lavavajillas. Cuenta con terraza, 2 dormitorios y dos baños. Internet WI-FI y Estacionamiento privado.
+                Por exigencia de autoridad sanitaria, no está permitido el uso de piscina, Gimnacio y espacios comunes mientras dure pandemia
+
+                Esta en el mejor barrio de Viña del mar, cercano a locales comerciales, Casino y centros de entretención. Cuenta con dos dormitorios cada uno con baño, el principal con cama matrimonial y el segundo con dos camas nido, cada uno con baño. La cocina cuanta con todo tipo de implemento incluso lavavajillas. Tiene implementos para recibir a 6 personas, pero solo pueden alojar a 4.
+                El depto. cuenta con una amplia terraza con una mesa para 4 personas y unos sillones para contemplar las tardes viñamarinas
+
+                El departamento cuenta con lavavajillas. El edificio posee lavadora y secadora con fichas.</p>
+
+        </div>
+    </div>
+    
+    <div class="col-6">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-07.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-02.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-03.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-05.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-09.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-10.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-12.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-14.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-17.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-21.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-1-optimized/viña-32.png')}}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        <div class="row d-flex align-items-center m-1">
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/cama.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 3 camas </p> 
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/bano.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 2 baños </p>  
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/piscina.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> piscina </p> 
+            </div>
+        </div>
+    
+        <div class="row d-flex align-items-center m-1">
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/estacionamiento.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> estacionamiento </p> 
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/wifi.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> wifi </p>  
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-center m-1">
+            <a href="https://www.airbnb.cl/rooms/8003478?source_impression_id=p3_1667673824_zWcWyT2oIFeTjYrp" type="button" class="btn btn-outline-primary btn-lg fs-4"> Arrendar!</a>
+        </div>
+    </div>
+</div>
+
+<!-- Vista al mar 1era línea, acogedor depto 1D1B -->
+
+<div class="row pt-3 pb-3 bg-gris-claro">
+    <div class="col-6">
+        <div class="ms-5 ms-2">
+            <h2> Vista al mar 1era línea, acogedor depto 1D1B </h2>
+            <p class="texto-jus"> Relájate en esta escapada única y tranquila.</p>
+        </div>
+    </div>
+    
+    <div class="col-6">
+        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="4" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="5" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="6" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="7" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="8" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="9" ></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-07.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-06.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-00.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-01.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-02.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-03.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-04.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-05.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-08.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-2-optimized/viña-09.png')}}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        <div class="row d-flex align-items-center m-1">
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/cama.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 3 camas </p> 
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/bano.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 1 baño </p>  
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/piscina.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> piscina </p> 
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-center m-1">
+            <a href="https://www.airbnb.cl/rooms/716018855143490539?source_impression_id=p3_1667673887_DLXXbbFEE28iDVOA" type="button" class="btn btn-outline-primary btn-lg fs-4"> Arrendar!</a>
+        </div>
+    </div>
+</div>
+
+<!-- Cercano al mar y comercio - Coraceros Avenue -->
+
+<div class="row pt-3 pb-3">
+    <div class="col-6">
+        <div class="ms-5 ms-2">
+            <h2> Cercano al mar y comercio - Coraceros Avenue </h2>
+            <p class="texto-jus"> Bienvenido a nuestro moderno y bien equipado departamento con vistas al cielo.
+                Ubicado en el edificio más alto de Viña del Mar, el apartamento ofrece impresionantes vistas del océano y las colinas de Valparaíso, así como comodidades estilo centro turístico y a solo 2 cuadras de la playa.
+                
+                El espacio
+                Cómodo y practico departamento de 1 dormitorio y 1 baño, con linda decoración y totalmente equipado.</p>
+        </div>
+    </div>
+    
+    <div class="col-6">
+        <div id="carouselExampleIndicators3" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="3" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="4" ></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/viña-3-optimized/viña-00.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-3-optimized/viña-01.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-3-optimized/viña-02.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-3-optimized/viña-03.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-3-optimized/viña-04.png')}}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        <div class="row d-flex align-items-center m-1">
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/cama.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 1 cama </p> 
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/bano.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 1 baño </p>  
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/piscina.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> piscina </p> 
+            </div>
+        </div>
+        <div class="row d-flex align-items-center m-1">
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/wifi.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> wifi </p> 
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/lavanderia.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> lavanderia </p> 
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-center m-1">
+            <a href="https://www.airbnb.cl/rooms/610138322099884112?source_impression_id=p3_1667673939_7rGgoVfcYrKm6YXY" type="button" class="btn btn-outline-primary btn-lg fs-4"> Arrendar!</a>
+        </div>
+    </div>
+</div>
+
+<!-- Vive Viña ~ En el ❤ de Viña del Mar -->
+
+<div class="row pt-3 pb-3 bg-gris-claro">
+    <div class="col-6">
+        <div class="ms-5 ms-2">
+            <h2> Vive Viña ~ En el ❤ de Viña del Mar </h2>
+            <p class="texto-jus">
+                Departamento moderno y minimalista, ubicado en una de las principales avenidas de Viña del Mar, con conectividad a los distintos puntos de interés que ofrece la zona.
+
+                Está equipado con todo lo necesario para pasar una grata estadía, cocina de full equipada con vitroceramica, cómodo living con smart TV 4K y comedor para 4,Wifi de alta velocidad, dormitorios con baño en suite. (El dormitorio principal también cuenta con Smart TV)
+
+                El edificio cuenta con conserje las 24 horas.
+                El espacio
+                Departamento moderno. Cuenta con todas las comodidades:
+
+                ☆Baño en suite
+                ♡Living-comedor
+                ☆Cocina americana
+                ♡Smart TV 4K 55"
+                ☆Wifi alta velocidad (160 mb)
+                ♡Servicio de lavandería
+                ☆Quincho y Piscina
+                Acceso de los huéspedes
+                -Piscina exterior en temporada de verano
+                -Lavandería con monedas
+                -Quincho de pago en la administación
+            </p>
+        </div>
+    </div>
+    
+    <div class="col-6">
+        <div id="carouselExampleIndicators4" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="2" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="3" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="4" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="5" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="6" ></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/viña-4-optimized/viña-00.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-4-optimized/viña-01.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-4-optimized/viña-02.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-4-optimized/viña-03.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-4-optimized/viña-04.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-4-optimized/viña-05.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-4-optimized/viña-06.png')}}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        <div class="row d-flex align-items-center m-1">
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/cama.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 1 cama </p> 
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/bano.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 1 baño </p>  
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/piscina.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> piscina </p> 
+            </div>
+        </div>
+        <div class="row d-flex align-items-center m-1">
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/wifi.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> wifi </p> 
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/lavanderia.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> lavanderia </p> 
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-center m-1">
+            <a href="https://www.airbnb.cl/rooms/17334037?source_impression_id=p3_1667673976_S8riuBi690L09plX" type="button" class="btn btn-outline-primary btn-lg fs-4"> Arrendar!</a>
+        </div>
+    </div>
+</div>
+
+<!-- Departamento moderno cerca de la playa-->
+
+<div class="row pt-3 pb-3">
+    <div class="col-6">
+        <div class="ms-5 ms-2">
+            <h2> Departamento moderno cerca de la playa </h1>
+            <p class="texto-jus">
+                Bienvenido a nuestro apartamento moderno y bien equipado con vistas al cielo.
+                Ubicado en el edificio más alto de Viña del Mar, el apartamento ofrece impresionantes vistas al océano y a las colinas de Valparaíso, así como servicios de estilo resort y pasos a la playa.
+                El espacio
+                El apartamento está en un edificio cerrado con porteros de recepción 24/7. El apartamento cuenta con un espacio de estacionamiento dedicado convenientemente ubicado en la estructura de estacionamiento con acceso en ascensor al edificio.
+                La eficiente cocina está equipada con todo lo necesario para cocinar una comida con las opciones de cenar en la mesa o en el balcón mientras disfruta de las vistas. El mismo balcón junto al dormitorio tiene un escritorio donde se puede trabajar y disfrutar de las vistas.
+                Hay wifi y TV por cable de varios canales.
+                Acceso de los huéspedes
+                Los huéspedes tienen uso de la piscina cubierta climatizada (sombrero de baño requerido), piscina al aire libre, salón comunitario en la azotea con increíbles vistas de 360 grados, pequeño gimnasio y sala de juegos. Acceso al gimnasio obtenido en la recepción.
+            </p>
+        </div>
+    </div>
+    
+    <div class="col-6">
+        <div id="carouselExampleIndicators5" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="3" ></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="4" ></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/viña-5-optimized/viña-00.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-5-optimized/viña-01.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-5-optimized/viña-02.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-5-optimized/viña-03.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/viña-5-optimized/viña-04.png')}}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        <div class="row d-flex align-items-center m-1">
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/cama.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 1 cama </p> 
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/bano.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> 1 baño </p>  
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/vista_al_mar.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> vista al mar </p> 
+            </div>
+        </div>
+        <div class="row d-flex align-items-center m-1">
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/wifi.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> wifi </p> 
+            </div>
+            <div class="col-1">
+                <img class="image-fluid" src="{{ url_for('static', filename='ico/depto/lavanderia.png')}}" style="width: 30px;">
+            </div>
+            <div class="col-3"> 
+                <p class="fs-6 m-2"> lavanderia </p> 
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-center m-1">
+            <a href="https://www.airbnb.cl/rooms/20856896?source_impression_id=p3_1667674082_dR29TrQnZC4gubj0" type="button" class="btn btn-outline-primary btn-lg fs-4"> Arrendar!</a>
+        </div>
+    </div>
+</div>
+
+<footer class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between md-bottom mt-3 ps-5 pe-5 pt-3 pb-3" style="height: 160px;">
+    <div class="d-flex align-items-center">
+            <img src="{{ url_for('static', filename='img/logo.jpeg')}}" width="100" height="100" alt="Aloja Fácil">
+            <a class="navbar-brand ms-2" style=" color: #c0c0c0;"><h2>Aloja Fácil</h2></a>
+    </div>
+    <div class="row">
+        <div class="col-5">
+            <h2 class="d-flex justify-content-center" style="color: #c0c0c0;">Ubicaciones</h2>
+            <div class="d-flex justify-content-center">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="/vina">Viña del Mar</a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="/renaca">Reñaca</a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="/concon">Concón</a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="/papudo">Papudo</a>
+            </div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5">
+            <h2 style="color: #c0c0c0;">Contacto</h2>
+            <div>
+                <img src="{{ url_for('static', filename='ico/whatsapp.png')}}" width="15" height="15" alt="Whatsapp">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="https://wa.me/56971416025">+56971416025</a>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='ico/instagram.png')}}" width="15" height="15" alt="Instagram">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="https://www.instagram.com/alojafacil/">@alojafacil</a>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='ico/facebook.png')}}" width="15" height="15" alt="Facebook">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="">Aloja Fácil</a>
+            </div>
+        </div>
+    
+    </div>
+    
+</footer>
+
+<script type="text/javascript" src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script>
+
+
+</body>
+</html>

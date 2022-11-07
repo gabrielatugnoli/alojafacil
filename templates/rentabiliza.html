@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Aloja Fácil - Rentabiliza tu propiedad - Departamentos y casas</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts CAMBIAR A MONTSERRAT-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fuente.css')}}">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/favicon.png')}}">
+
+        <meta name="description" content="Aloja Fácil te permite rentabilizar tu propiedad. Administramos departamentos y casas en la V Región. Gestionamos los arriendos, mantención, aseo y publicidad de tu propiedad.">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-lg-top" style="height: 100px;">
+            <div class="container-fluid">
+                
+                <a class="navbar-brand" href="/">
+                    <img src="{{ url_for('static', filename='img/logo.jpeg')}}" alt="Aloja Fácil" width="70" height="70">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-3 mb-2 mb-lg-0 fs-5">
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/"> Inicio </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ubicaciones
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark bg-primary">
+                                <li><a class="dropdown-item" href="/vina">Viña del Mar</a></li>
+                                <li><a class="dropdown-item " href="/concon">Concón</a></li>
+                                <li><a class="dropdown-item" href="/renaca">Reñaca</a></li>
+                                <li><a class="dropdown-item" href="/papudo">Papudo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/rentabiliza">¿Eres propietario?</a>
+                        </li>
+                    </ul>
+        
+                    <ul class="navbar-nav ms-auto me-1 mb-2 mb-lg-0 fs-5 ps-3"> 
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/contacto"> Contáctanos </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" aria-current="page" href="https://www.airbnb.cl/users/show/116558655"> AirBnB </a>
+                        </li>
+                    </ul>
+                </div>
+        
+            </div>
+        </nav>
+
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                <img src="{{ url_for('static', filename='img/rentabiliza/living.png')}}" class="d-block w-100 foto" alt="Rentabiliza tu propiedad, departamentos y casas" height="500">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="mb-4 text-white titulo">
+                        Aloja Fácil
+                    </h1>
+                    <h2 class="fs-1 text-white titulo">Rentabiliza tu propiedad</h2>                
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- MIS ICONOS -->
+        <div class="container mb-2 mt-4 ms-auto">  
+            <h3 class="text-center m-3 fs-2">Nuestros servicios</h3>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card container-renta">
+                        <div class="ms-5 ps-4 pt-4 me-5 pe-4">
+                            <img class="card-img-top" src="{{ url_for('static', filename='ico/articulos.png')}} " alt="Artículos de casa">
+                        </div>
+                        <div class="card-body">
+                        <h3 class="text-center titulo-card">Artículos de casa</h3>
+                        <p class="card-text texto-jus">Tu propiedad siempre estará equipada con todos los artículos necesarios para que los huéspedes pasen una excelente estadía.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card container-renta">
+                        <div class="ms-5 ps-4 pt-4 me-5 pe-4">
+                            <img class="card-img-top" src="{{ url_for('static', filename='ico/camara1.png')}}" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                        <h3 class="titulo-card  text-center">Fotos profesionales</h3>
+                        <p class="card-text texto-jus">Tomaremos excelentes fotos y videos para mostrar tu departamento. Nos encargamos de la edición y difusión del contenido por redes sociales y páginas de arriendos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card container-renta">
+                        <div class="ms-5 ps-4 pt-4 me-5 pe-4">
+                            <img class="card-img-top" src="{{ url_for('static', filename='ico/contacto.png')}}" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                        <h3 class="titulo-card  text-center">Contacto</h3>
+                        <p class="card-text texto-jus">Siempre estamos disponibles a escucharte. Nos puedes contactar por WhatsApp por cualquier eventualidad relacionada a tu propiedad y a nuestra gestión. Estamos para brindarte la mejor experiencia con la gestión de tu propiedad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card container-renta">
+                        <div class="ms-5 ps-4 pt-4 me-5 pe-4">
+                            <img class="card-img-top" src="{{ url_for('static', filename='ico/aprendizaje.png')}}" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                        <h3 class="titulo-card  text-center">Precios competitivos</h3>
+                        <p class="card-text texto-jus">Creamos un algoritmo computacional único que evalúa los precios y disponibilidad de la competencia acorde a tu propiedad, generando estimaciones de precios que permiten estar posicionados para que los clientes potenciales nos prefieran.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mb-4 mt-2 ms-auto">  
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card container-renta">
+                        <div class="ms-5 ps-4 pt-4 me-5 pe-4">
+                            <img class="card-img-top" src="{{ url_for('static', filename='ico/escoba.png')}}" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                        <h3 class="titulo-card  text-center">Limpieza</h3>
+                        <p class="card-text texto-jus">Mantenemos tu propiedad limpia y ordenada para que esté en las mejores condiciones para los huéspedes. Nos preocupamos de las evaluaciones y comentarios de nuestros clientes, mejorando cada detalle, para obtener los mejores comentarios y calificaciones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card container-renta">
+                        <div class="ms-5 ps-4 pt-4 me-5 pe-4">
+                            <img class="card-img-top" src="{{ url_for('static', filename='ico/publicacion.png')}}" alt="Publicidad">
+                        </div>
+                        <div class="card-body">
+                        <h3 class="titulo-card  text-center">Publicidad</h3>
+                        <p class="card-text texto-jus">Tu propiedad se mostrará por diferentes canales publicitarios. Desde Airbnb, hasta por redes sociales, como Facebook, Instagram y WhatsApp en el caso de clientes frecuentes y confiables. Contamos con muy buenas tasas de arrendamiento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card container-renta">
+                        <div class="ms-5 ps-4 pt-4 me-5 pe-4">
+                            <img class="card-img-top" src="{{ url_for('static', filename='ico/reparacion.png')}}" alt="Reparaciones">
+                        </div>
+                        <div class="card-body">
+                        <h3 class="titulo-card text-center">Reparaciones</h3>
+                        <p class="card-text texto-jus">Nos preocupamos de mantener tu propiedad en buenas condiciones, como por ejemplo cañerías, luces, pintura, etc… siempre con el objetivo de brindar una estadía perfecta y mantener la propiedad hermosa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card container-renta">
+                        <div class="ms-5 ps-4 pt-4 me-5 pe-4">
+                            <img class="card-img-top" src="{{ url_for('static', filename='ico/airbnb.png')}}" alt="AirBnB">
+                        </div>
+                        <div class="card-body">
+                        <h3 class="titulo-card text-center">AirBnB</h3>
+                        <p class="card-text texto-jus">Nuestro principal canal para mostrar las propiedades que administramos es Airbnb. Desde 2017 Aloja Fácil ha estado brindando alojamientos. Contamos con trayectoria, excelente exposición en la búsqueda de Airbnb, además de muy buenos comentarios y excelentes calificaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-1">
+            <div class="row">
+                <div class="col d-flex">
+                    <div class="col-9 d-flex">
+                        <img src="{{ url_for('static', filename='img/rentabiliza/2.png')}}" class="figure-img img-fluid rounded w-100 h-100" alt="Concón">
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-body align-middle">
+                            <h3 class="card-title">Nos preocupamos de la presentación</h3>
+                            <p class="card-text texto-jus">Nos preocupamos del orden y de la limpieza de tu departamento, manteniéndolo en óptimas condiciones y mostrándolo en hermosas fotos para hacerlo más atractivo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mb-1">
+            <div class="row">
+                <div class="col d-flex">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h3 class="card-title">Excelente reputación con más de 600 reseñas</h3>
+                            <p class="card-text texto-jus"> Nos dedicamos a rentabilizar departamentos desde el 2017 a través de arriendos usando plataformas que le dan visibilidad a tu propiedad. Nos encargamos de la mantención, publicidad y fotografía.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 d-flex">
+                    <img src="{{ url_for('static', filename='img/rentabiliza/1.png')}}" class="figure-img img-fluid rounded h-100" alt="Papudo">
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mb-1">
+            <div class="row">
+                <div class="col d-flex">
+                    <div class="col-9 d-flex">
+                        <img src="{{ url_for('static', filename='img/rentabiliza/3.png')}}" class="figure-img img-fluid rounded w-100 h-100" alt="Reñaca">
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h3 class="card-title">Mantenemos tu departamento limpio y en buenas condiciones</h3>
+                            <p class="card-text texto-jus">Constantemente nos encargamos de la limpieza para cada arriendo, además de mantener el departamento equipado para cada arrendatario. También realizamos las mantenciones y reparaciones necesarias para el estado óptimo de tu departamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between md-bottom mt-3 ps-5 pe-5 pt-3 pb-3" style="height: 160px;">
+            <div class="d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='img/logo.jpeg')}}" width="100" height="100" alt="Aloja Fácil">
+                    <a class="navbar-brand ms-2" style=" color: #c0c0c0;"><h2>Aloja Fácil</h2></a>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <h2 class="d-flex justify-content-center" style="color: #c0c0c0;">Ubicaciones</h2>
+                    <div class="d-flex justify-content-center">
+                        <a class="text-decoration-none" style="color: #c0c0c0;" href="/vina">Viña del Mar</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a class="text-decoration-none" style="color: #c0c0c0;" href="/renaca">Reñaca</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a class="text-decoration-none" style="color: #c0c0c0;" href="/concon">Concón</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a class="text-decoration-none" style="color: #c0c0c0;" href="/papudo">Papudo</a>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-5">
+                    <h2 style="color: #c0c0c0;">Contacto</h2>
+                    <div>
+                        <img src="{{ url_for('static', filename='ico/whatsapp.png')}}" width="15" height="15" alt="Whatsapp">
+                        <a class="text-decoration-none" style="color: #c0c0c0;" href="https://wa.me/56971416025">+56971416025</a>
+                    </div>
+                    <div>
+                        <img src="{{ url_for('static', filename='ico/instagram.png')}}" width="15" height="15" alt="Instagram">
+                        <a class="text-decoration-none" style="color: #c0c0c0;" href="https://www.instagram.com/alojafacil/">@alojafacil</a>
+                    </div>
+                    <div>
+                        <img src="{{ url_for('static', filename='ico/facebook.png')}}" width="15" height="15" alt="Facebook">
+                        <a class="text-decoration-none" style="color: #c0c0c0;" href="">Aloja Fácil</a>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </footer>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .dropdown-item:hover{
+            background-color: red;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jumbotron.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fuente.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/favicon.png')}}">
+    <title>Aloja Fácil - Arriendos en la V región</title>
+    <meta name="description" content="Aloja Fácil tiene los mejores departamentos y casas para arrendar en la V región y tener las mejores vacaciones. Rentabiliza tu departamento con nosotros. Estamos en Viña del Mar, Reñaca, Concón y Papudo.">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-lg-top" style="height: 100px;">
+    <div class="container-fluid">
+        
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='img/logo.jpeg')}}" alt="Logo Aloja Fácil" width="70" height="70">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-3 mb-2 mb-lg-0 fs-5">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"> Inicio </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ubicaciones
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark bg-primary">
+                        <li><a class="dropdown-item" href="/vina">Viña del Mar</a></li>
+                        <li><a class="dropdown-item " href="/concon">Concón</a></li>
+                        <li><a class="dropdown-item" href="/renaca">Reñaca</a></li>
+                        <li><a class="dropdown-item" href="/papudo">Papudo</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/rentabiliza">¿Eres propietario?</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto me-1 mb-2 mb-lg-0 fs-5 ps-3"> 
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/contacto"> Contáctanos </a>
+                </li>
+                <li>
+                    <a class="nav-link" aria-current="page" href="https://www.airbnb.cl/users/show/116558655"> AirBnB </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+            <a href="/rentabiliza">        
+                <img src="{{ url_for('static', filename='img/sliders/slide1.png')}}" class="d-block w-100" alt="rentabiliza tu propiedad con aloja fácil" height="500">
+            </a>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <a href="/rentabiliza">
+                <img src="{{ url_for('static', filename='img/sliders/slide2.png')}}" class="d-block w-100" alt="aloja fácil te ofrece publicidad, mantención y fotografía" height="500">
+            </a>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <a href="https://www.airbnb.cl/users/show/116558655">
+                <img src="{{ url_for('static', filename='img/sliders/slide3.png')}}" class="d-block w-100" alt="arrienda departamentos y casas en la v región con aloja fácil" height="500">
+            </a>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<section class="testimonials text-center bg-light bg-white">
+    <h1>Aloja Fácil</h1>
+        <div class="container">
+            <h2 class="mb-5"> ¡Arrienda y rentabiliza tu departamento! </h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid rounded-circle mb-3" src="{{ url_for('static', filename='ico/1.png')}}" alt="...">
+                        <h3> Fotografía </h3>
+                        <p class="font-weight-light mb-0 texto-jus">Nos encargamos del material fotográfico para promocionar los departamentos.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid rounded-circle mb-3" src="{{ url_for('static', filename='ico/2.png')}}" alt="..." />
+                        <h3> Mantención </h3>
+                        <p class="font-weight-light mb-0 texto-jus">Hacemos mantención a nuestros departamentos constantemente para mantenerlos impecables.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                        <img class="img-fluid rounded-circle mb-3" src="{{ url_for('static', filename='ico/3.png')}}" alt="..." />
+                        <h3> Rentabiliza </h3>
+                        <p class="font-weight-light mb-0 texto-jus">Administramos propiedades para rentabilizarlos. Si estás interesado en que administremos tu propiedad, ¡escríbenos!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center m-1">
+            <a href="/rentabiliza" type="button" class="btn btn-outline-primary btn-lg fs-4 mt-5"> Rentabiliza tu departamento con nosotros </a>
+        </div>
+</section>
+
+<!-- Ubicaciones -->
+
+<h2 class="text-center mb-4 fs-1">ESTAMOS EN</h2>
+
+<div class="container mb-1">
+    <div class="row">
+        <div class="col d-flex">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title">PAPUDO</h3>
+                    <p class="card-text texto-jus">Contamos con cuatro departamentos con excelente vista y accesibilidad. Si quieres conocer Papudo y alojarte en un buen lugar, ¡contáctanos!</p>
+                    <div class="d-flex justify-content-center m-3">
+                        <a href="/papudo" type="button" class="btn btn-outline-primary btn-lg fs-4"> Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 d-flex">
+            <img src="{{ url_for('static', filename='loc/papudo_ini.jpg')}}" class="figure-img img-fluid rounded h-100" alt="Papudo arriendos">
+        </div>
+    </div>
+</div>
+
+<div class="container mb-1">
+    <div class="row">
+        <div class="col d-flex">
+            <div class="col-9 d-flex">
+                <img src="{{ url_for('static', filename='loc/concon_ini.jpg')}}" class="figure-img img-fluid rounded w-100 h-100" alt="Concón arriendos">
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title">CONCÓN</h3>
+                    <p class="card-text texto-jus">Nuestros departamentos en Concón cuentan con excelente vista al mar y ubicación para movilizarte entre Viña y Reñaca en minutos.</p>
+                    <div class="d-flex justify-content-center m-3">
+                        <a href="/concon" type="button" class="btn btn-outline-primary btn-lg fs-4"> Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-1">
+    <div class="row">
+        <div class="col d-flex">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title"> VIÑA DEL MAR</h3>
+                    <p class="card-text texto-jus">Viña del Mar lo tiene todo: excelente accesibilidad para movilizarte y disfrutar de las maravillas de la comuna.</p>
+                    <div class="d-flex justify-content-center m-3">
+                        <a href="/vina" type="button" class="btn btn-outline-primary btn-lg fs-4"> Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 d-flex">
+            <img src="{{ url_for('static', filename='loc/vina_ini.jpg')}}" class="figure-img img-fluid rounded h-100" alt="Viña del Mar arriendos">
+        </div>
+    </div>
+</div>
+
+<div class="container mb-1">
+    <div class="row">
+        <div class="col d-flex">
+            <div class="col-9 d-flex">
+                <img src="{{ url_for('static', filename='loc/renaca_ini.jpg')}}" class="figure-img img-fluid rounded w-100 h-100" alt="Reñaca arriendos">
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title">REÑACA</h3>
+                    <p class="card-text texto-jus">De las mejores vistas están en nuestras propiedades de Reñaca. Tienes acceso rápidamente a la playa y estás a menos de 15 minutos de Viña del Mar.</p>
+                    <div class="d-flex justify-content-center m-3">
+                        <a href="/renaca" type="button" class="btn btn-outline-primary btn-lg fs-4"> Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between md-bottom mt-3 ps-5 pe-5 pt-3 pb-3" style="height: 160px;">
+    <div class="d-flex align-items-center">
+            <img src="{{ url_for('static', filename='img/logo.jpeg')}}" width="100" height="100" alt="Aloja Fácil">
+            <a class="navbar-brand ms-2" style=" color: #c0c0c0;"><h2>Aloja Fácil</h2></a>
+    </div>
+    <div class="row">
+        <div class="col-5">
+            <h2 class="d-flex justify-content-center" style="color: #c0c0c0;">Ubicaciones</h2>
+            <div class="d-flex justify-content-center">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="/vina">Viña del Mar</a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="/renaca">Reñaca</a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="/concon">Concón</a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="/papudo">Papudo</a>
+            </div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5">
+            <h2 style="color: #c0c0c0;">Contacto</h2>
+            <div>
+                <img src="{{ url_for('static', filename='ico/whatsapp.png')}}" width="15" height="15" alt="Whatsapp">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="https://wa.me/56971416025">+56971416025</a>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='ico/instagram.png')}}" width="15" height="15" alt="Instagram">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="https://www.instagram.com/alojafacil/">@alojafacil</a>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='ico/facebook.png')}}" width="15" height="15" alt="Facebook">
+                <a class="text-decoration-none" style="color: #c0c0c0;" href="">Aloja Fácil</a>
+            </div>
+        </div>
+    
+    </div>
+    
+</footer>
+
+<script type="text/javascript" src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script>
+
+
+</body>
+</html>

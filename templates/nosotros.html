@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .dropdown-item:hover{
+            background-color: red;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jumbotron.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fuente.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/favicon.png')}}">
+
+    <title>Nosotros - Aloja Fácil</title>
+    <meta name="description" content="Somos una empresa orientada a administrar departamentos en la V Región. Rentabiliza tu departamento o casa para arriendos en Viña del Mar, Concón, Reñaca y Papudo - Aloja Fácil">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-lg-top" style="height: 100px;">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='img/logo.jpeg')}}" alt="" width="70" height="70">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-3 mb-2 mb-lg-0 fs-5">
+                    <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/"> Inicio </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ubicaciones
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark bg-primary">
+                            <li><a class="dropdown-item" href="/vina">Viña del Mar</a></li>
+                            <li><a class="dropdown-item " href="/concon">Concón</a></li>
+                            <li><a class="dropdown-item" href="/renaca">Reñaca</a></li>
+                            <li><a class="dropdown-item" href="/papudo">Papudo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/rentabiliza">¿Eres propietario?</a>
+                    </li>
+                </ul>
+    
+                <ul class="navbar-nav ms-auto me-1 mb-2 mb-lg-0 fs-5 ps-3"> 
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/contacto"> Contáctanos </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" aria-current="page" href="https://www.airbnb.cl/users/show/116558655"> AirBnB </a>
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+    </nav>
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+            <img src="{{ url_for('static', filename='img/nosotros/fondo.png')}}" class="d-block w-100 foto" alt="..." height="500">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="mb-4 text-white titulo">
+                    ¿Quiénes somos?
+                </h1>                
+            </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col d-flex">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h1 class="card-title texto-h1">Nosotros</h1>
+                        <p class="card-text texto-jus">Somos una empresa orientada a administrar departamentos en la V Región. LLevamos más de <strong>cuatro años brindando a nuestros clientes la mejor experiencia y comodidad en sus vacaciones</strong>, esto se ve reflejado en los excelentes comentarios y reseñas que poseemos.</p>
+                        <p class="card-text texto-jus">Actualmente, Aloja Fácil está conformada por dos socios: Cristóbal Oyarzún Flores, quien la preside, y Marco San Martín Hormazábal. Estamos en Viña del Mar, Reñaca, Concón y Papudo. <strong>Contamos con más de 18 departamentos y más de 600 reseñas.</strong></p>
+                        <p class="card-text texto-jus">Si posees departamento, <strong>puedes contactarnos para rentabilizarlo</strong> y mantenerlo en excelentes condiciones. Si deseas arrendar alguna de nuestras propiedades, <strong>puedes hacerlo a través de nuestro perfil en AirBnB.</strong></p>
+                        <div class="d-flex justify-content-center m-3">
+                            <a href="https://www.airbnb.cl/users/show/116558655" type="button" class="btn btn-outline-primary btn-lg fs-4">Ver más en AirBnB</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 d-flex">
+                <img src="{{ url_for('static', filename='img/nosotros/nosotros.png')}}" class="figure-img img-fluid rounded h-100" alt="Logo Aloja Facil">
+            </div>
+        </div>
+    </div>
+
+	<footer class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between md-bottom mt-3 ps-5 pe-5 pt-3 pb-3" style="height: 160px;">
+		<div class="d-flex align-items-center">
+				<img src="{{ url_for('static', filename='img/logo.jpeg')}}" width="100" height="100" alt="Aloja Fácil">
+				<a class="navbar-brand ms-2" style=" color: #c0c0c0;"><h2>Aloja Fácil</h2></a>
+		</div>
+		<div class="row">
+			<div class="col-5">
+				<h2 class="d-flex justify-content-center" style="color: #c0c0c0;">Ubicaciones</h2>
+				<div class="d-flex justify-content-center">
+					<a class="text-decoration-none" style="color: #c0c0c0;" href="/vina">Viña del Mar</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a class="text-decoration-none" style="color: #c0c0c0;" href="/renaca">Reñaca</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a class="text-decoration-none" style="color: #c0c0c0;" href="/concon">Concón</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a class="text-decoration-none" style="color: #c0c0c0;" href="/papudo">Papudo</a>
+				</div>
+			</div>
+			<div class="col-2"></div>
+			<div class="col-5">
+				<h2 style="color: #c0c0c0;">Contacto</h2>
+				<div>
+					<img src="{{ url_for('static', filename='ico/whatsapp.png')}}" width="15" height="15" alt="Whatsapp">
+                    <a class="text-decoration-none" style="color: #c0c0c0;" href="https://wa.me/56971416025">+56971416025</a>
+				</div>
+				<div>
+					<img src="{{ url_for('static', filename='ico/instagram.png')}}" width="15" height="15" alt="Instagram">
+					<a class="text-decoration-none" style="color: #c0c0c0;" href="https://www.instagram.com/alojafacil/">@alojafacil</a>
+				</div>
+				<div>
+					<img src="{{ url_for('static', filename='ico/facebook.png')}}" width="15" height="15" alt="Facebook">
+					<a class="text-decoration-none" style="color: #c0c0c0;" href="">Aloja Fácil</a>
+				</div>
+			</div>
+		
+		</div>
+		
+	</footer>
+
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.2/dist/index.bundle.min.js"></script>
+
+</body>
+</html>

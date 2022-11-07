@@ -1,0 +1,25 @@
+$spacer: 1.5rem;
+
+$gris: #c9c9c9;
+$blanco: #ffffff;
+$negro: #0c0c0c;
+$azul: #131A2B;
+
+$theme-colors: (
+  "primary": $azul,
+  "secondary": $gris,
+  "gris-claro": #e6e6e6,
+  "gris-claro2": #f5f5f5,
+);
+
+$navbar-dark-color:         $gris;
+$navbar-dark-hover-color:   $blanco;
+
+$carousel-indicator-width:           20px;
+$carousel-indicator-height:          5px;
+$carousel-control-color:             $negro;
+$carousel-control-icon-width:        3.5rem;
+
+/* dropdown-item:hover se cambio en el main.css, no hubo otra forma para el hober del item del navbar */
+
+@import "../node_modules/bootstrap/scss/bootstrap";
